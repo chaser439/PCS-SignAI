@@ -1,0 +1,63 @@
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -42; }
+}
+
+@keyframes drift-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes orbit-one {
+  from { transform: rotate(0deg); transform-origin: 348px 320px; }
+  to { transform: rotate(360deg); transform-origin: 348px 320px; }
+}
+
+@keyframes pulse-ring {
+  0% { opacity: 0.6; transform: scale(0.86); transform-origin: center; }
+  75%, 100% { opacity: 0; transform: scale(1.16); transform-origin: center; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.28); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero__copy,
+  .hero__copy > *,
+  .hero__visual-wrap,
+  .section-heading,
+  .capability-item,
+  .case-story,
+  .status-console,
+  .status-row,
+  .journey-stage,
+  .journey-destination,
+  .scenario-row,
+  .closing-section__statement {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}
