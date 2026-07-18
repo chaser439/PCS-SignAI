@@ -1,0 +1,22 @@
+﻿{
+  "schema_version": "1.0",
+  "video_id": "mock001",
+  "user_id": "user001",
+  "status": "ok",
+  "source_path": "mock://case001",
+  "fps": 12.0,
+  "frame_count": 96,
+  "sign_sequence": ["妈妈", "药"],
+  "token_details": [
+    { "token": "妈妈", "start_sec": 0.1, "end_sec": 0.9, "confidence": 0.91, "modalities": ["hand"] },
+    { "token": "药", "start_sec": 1.0, "end_sec": 1.8, "confidence": 0.89, "modalities": ["hand", "face"] }
+  ],
+  "non_manual_cues": {
+    "motion_intensity": 0.41,
+    "brow_raise": 0.09,
+    "mouth_open": 0.08,
+    "face_tension": 0.52
+  },
+  "overall_confidence": 0.90,
+  "error": null
+}

@@ -1,0 +1,41 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sign Output Schema",
+  "description": "Module A 输出给 Module B 的标准化手语识别结果",
+  "type": "object",
+  "required": ["schema_version", "video_id", "status", "source_path", "sign_sequence", "overall_confidence"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "video_id": { "type": "string" },
+    "user_id": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["ok", "timeout", "error"] },
+    "source_path": { "type": "string" },
+    "fps": { "type": "number" },
+    "frame_count": { "type": "integer" },
+    "sign_sequence": { "type": "array", "items": { "type": "string" } },
+    "token_details": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "token": { "type": "string" },
+          "start_sec": { "type": "number" },
+          "end_sec": { "type": "number" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "modalities": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "non_manual_cues": {
+      "type": "object",
+      "properties": {
+        "motion_intensity": { "type": "number" },
+        "brow_raise": { "type": "number" },
+        "mouth_open": { "type": "number" },
+        "face_tension": { "type": "number" }
+      }
+    },
+    "overall_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "error": { "type": ["object", "null"] }
+  }
+}
