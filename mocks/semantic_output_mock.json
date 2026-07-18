@@ -1,0 +1,20 @@
+﻿{
+  "schema_version": "1.0",
+  "video_id": "mock001",
+  "user_id": "user001",
+  "status": "ok",
+  "input_sign_sequence": ["妈妈", "药"],
+  "rag_hits": [
+    { "id": "home_med_01", "title": "家庭服药提醒", "score": 0.76, "domain": "home_medical" }
+  ],
+  "memory_hits": [
+    { "id": "mem_010", "score": 0.88, "meaning": "该用户过去用“妈妈+药”表达提醒妈妈按时吃药" }
+  ],
+  "emotion": { "label": "关心", "score": 0.81 },
+  "normalized_text": "用户提到了妈妈和药。",
+  "inferred_intent": "用户可能是在提醒妈妈按时服药。",
+  "evidence": ["历史表达习惯匹配", "家庭医疗知识命中"],
+  "confidence_breakdown": { "sign_conf": 0.90, "rag_conf": 0.76, "memory_conf": 0.88, "llm_conf": 0.85 },
+  "overall_confidence": 0.85,
+  "error": null
+}
