@@ -1,0 +1,1532 @@
+[
+  {
+    "id": "sign_001",
+    "content": "手语动作:\n我,医院,去\n\n\n语义:\n表示用户准备前往医院\n\n\n中文表达:\n我要去医院\n\n\n用户意图:\ngo_to_hospital\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "go_to_hospital",
+      "scenario": "daily",
+      "gloss": [
+        "我",
+        "医院",
+        "去"
+      ]
+    }
+  },
+  {
+    "id": "sign_002",
+    "content": "手语动作:\n头,疼\n\n\n语义:\n表示身体出现头部疼痛\n\n\n中文表达:\n我的头很疼\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "头",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_003",
+    "content": "手语动作:\n谢谢\n\n\n语义:\n表示感谢他人的帮助\n\n\n中文表达:\n谢谢你的帮助\n\n\n用户意图:\nexpress_gratitude\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_gratitude",
+      "scenario": "social",
+      "gloss": [
+        "谢谢"
+      ]
+    }
+  },
+  {
+    "id": "sign_004",
+    "content": "手语动作:\n帮助,需要\n\n\n语义:\n表示请求帮助\n\n\n中文表达:\n我需要帮助\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nanxious",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "request_help",
+      "scenario": "daily",
+      "gloss": [
+        "帮助",
+        "需要"
+      ]
+    }
+  },
+  {
+    "id": "sign_005",
+    "content": "手语动作:\n开心\n\n\n语义:\n表示积极愉快情绪\n\n\n中文表达:\n我很开心\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nhappy",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "happy",
+      "intent": "express_emotion",
+      "scenario": "daily",
+      "gloss": [
+        "开心"
+      ]
+    }
+  },
+  {
+    "id": "sign_006",
+    "content": "手语动作:\n难过\n\n\n语义:\n表示悲伤情绪\n\n\n中文表达:\n我感觉很难过\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nsad",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "sad",
+      "intent": "express_emotion",
+      "scenario": "daily",
+      "gloss": [
+        "难过"
+      ]
+    }
+  },
+  {
+    "id": "sign_007",
+    "content": "手语动作:\n医生,找\n\n\n语义:\n表示寻找医生进行咨询\n\n\n中文表达:\n我要找医生\n\n\n用户意图:\nseek_medical_help\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nneutral",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "seek_medical_help",
+      "scenario": "hospital",
+      "gloss": [
+        "医生",
+        "找"
+      ]
+    }
+  },
+  {
+    "id": "sign_008",
+    "content": "手语动作:\n吃药\n\n\n语义:\n表示服用药物\n\n\n中文表达:\n我要吃药\n\n\n用户意图:\nmedical_action\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nneutral",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "medical_action",
+      "scenario": "hospital",
+      "gloss": [
+        "吃药"
+      ]
+    }
+  },
+  {
+    "id": "sign_009",
+    "content": "手语动作:\n朋友,见面\n\n\n语义:\n表示与朋友见面交流\n\n\n中文表达:\n我要和朋友见面\n\n\n用户意图:\nunknown\n\n\n应用场景:\ndaily\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "unknown",
+      "scenario": "daily",
+      "gloss": [
+        "朋友",
+        "见面"
+      ]
+    }
+  },
+  {
+    "id": "sign_010",
+    "content": "手语动作:\n谢谢,帮助\n\n\n语义:\n表达对帮助行为的感谢\n\n\n中文表达:\n谢谢你的帮助\n\n\n用户意图:\nunknown\n\n\n应用场景:\ndaily\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "unknown",
+      "scenario": "daily",
+      "gloss": [
+        "谢谢",
+        "帮助"
+      ]
+    }
+  },
+  {
+    "id": "sign_011",
+    "content": "手语动作:\n胃,疼\n\n\n语义:\n表示胃部疼痛或胃部不舒服\n\n\n中文表达:\n我的胃很疼，我想去医院检查\n\n\n用户意图:\nseek_medical_help\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "seek_medical_help",
+      "scenario": "hospital",
+      "gloss": [
+        "胃",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_012",
+    "content": "手语动作:\n肚子,疼\n\n\n语义:\n表示腹部出现疼痛\n\n\n中文表达:\n我的肚子疼\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "肚子",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_013",
+    "content": "手语动作:\n发烧\n\n\n语义:\n表示身体温度升高\n\n\n中文表达:\n我发烧了\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "发烧"
+      ]
+    }
+  },
+  {
+    "id": "sign_014",
+    "content": "手语动作:\n咳嗽\n\n\n语义:\n表示呼吸系统不舒服\n\n\n中文表达:\n我一直咳嗽\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "咳嗽"
+      ]
+    }
+  },
+  {
+    "id": "sign_015",
+    "content": "手语动作:\n感冒\n\n\n语义:\n表示身体出现感冒症状\n\n\n中文表达:\n我感冒了\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "感冒"
+      ]
+    }
+  },
+  {
+    "id": "sign_016",
+    "content": "手语动作:\n牙,疼\n\n\n语义:\n表示牙齿疼痛\n\n\n中文表达:\n我的牙很疼\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "牙",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_017",
+    "content": "手语动作:\n眼睛,疼\n\n\n语义:\n表示眼部不适或疼痛\n\n\n中文表达:\n我的眼睛不舒服\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "眼睛",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_018",
+    "content": "手语动作:\n胸,疼\n\n\n语义:\n表示胸部出现疼痛\n\n\n中文表达:\n我的胸口疼\n\n\n用户意图:\nseek_medical_help\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "seek_medical_help",
+      "scenario": "hospital",
+      "gloss": [
+        "胸",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_019",
+    "content": "手语动作:\n腿,疼\n\n\n语义:\n表示腿部疼痛\n\n\n中文表达:\n我的腿疼\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "腿",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_020",
+    "content": "手语动作:\n哪里,疼\n\n\n语义:\n询问疼痛位置\n\n\n中文表达:\n哪里疼\n\n\n用户意图:\nask_information\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nneutral",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_information",
+      "scenario": "hospital",
+      "gloss": [
+        "哪里",
+        "疼"
+      ]
+    }
+  },
+  {
+    "id": "sign_021",
+    "content": "手语动作:\n药,没有\n\n\n语义:\n表示没有药物\n\n\n中文表达:\n没有药了\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nanxious",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "request_help",
+      "scenario": "hospital",
+      "gloss": [
+        "药",
+        "没有"
+      ]
+    }
+  },
+  {
+    "id": "sign_022",
+    "content": "手语动作:\n医生,预约\n\n\n语义:\n表示预约医生\n\n\n中文表达:\n我要预约医生\n\n\n用户意图:\nseek_service\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nneutral",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "seek_service",
+      "scenario": "hospital",
+      "gloss": [
+        "医生",
+        "预约"
+      ]
+    }
+  },
+  {
+    "id": "sign_023",
+    "content": "手语动作:\n医院,在哪里\n\n\n语义:\n询问医院位置\n\n\n中文表达:\n医院在哪里\n\n\n用户意图:\nask_direction\n\n\n应用场景:\nhospital\n\n\n情绪状态:\nneutral",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_direction",
+      "scenario": "hospital",
+      "gloss": [
+        "医院",
+        "在哪里"
+      ]
+    }
+  },
+  {
+    "id": "sign_024",
+    "content": "手语动作:\n疼,严重\n\n\n语义:\n表示疼痛程度较高\n\n\n中文表达:\n疼得很严重\n\n\n用户意图:\ndescribe_symptom\n\n\n应用场景:\nhospital\n\n\n情绪状态:\npain",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "pain",
+      "intent": "describe_symptom",
+      "scenario": "hospital",
+      "gloss": [
+        "疼",
+        "严重"
+      ]
+    }
+  },
+  {
+    "id": "sign_025",
+    "content": "手语动作:\n休息\n\n\n语义:\n表示需要休息恢复\n\n\n中文表达:\n我想休息一下\n\n\n用户意图:\nexpress_need\n\n\n应用场景:\nhospital\n\n\n情绪状态:\ntired",
+    "category": "medical",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "tired",
+      "intent": "express_need",
+      "scenario": "hospital",
+      "gloss": [
+        "休息"
+      ]
+    }
+  },
+  {
+    "id": "sign_026",
+    "content": "手语动作:\n水\n\n\n语义:\n表示需要饮水或口渴\n\n\n中文表达:\n我想喝水\n\n\n用户意图:\nexpress_need\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_need",
+      "scenario": "daily",
+      "gloss": [
+        "水"
+      ]
+    }
+  },
+  {
+    "id": "sign_027",
+    "content": "手语动作:\n吃饭\n\n\n语义:\n表示需要进食\n\n\n中文表达:\n我要吃饭\n\n\n用户意图:\nexpress_need\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_need",
+      "scenario": "daily",
+      "gloss": [
+        "吃饭"
+      ]
+    }
+  },
+  {
+    "id": "sign_028",
+    "content": "手语动作:\n饿\n\n\n语义:\n表示身体饥饿状态\n\n\n中文表达:\n我饿了\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "describe_state",
+      "scenario": "daily",
+      "gloss": [
+        "饿"
+      ]
+    }
+  },
+  {
+    "id": "sign_029",
+    "content": "手语动作:\n睡觉\n\n\n语义:\n表示需要休息或睡眠\n\n\n中文表达:\n我要睡觉\n\n\n用户意图:\nexpress_need\n\n\n应用场景:\ndaily\n\n\n情绪状态:\ntired",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "tired",
+      "intent": "express_need",
+      "scenario": "daily",
+      "gloss": [
+        "睡觉"
+      ]
+    }
+  },
+  {
+    "id": "sign_030",
+    "content": "手语动作:\n累\n\n\n语义:\n表示身体疲劳\n\n\n中文表达:\n我很累\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\ndaily\n\n\n情绪状态:\ntired",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "tired",
+      "intent": "describe_state",
+      "scenario": "daily",
+      "gloss": [
+        "累"
+      ]
+    }
+  },
+  {
+    "id": "sign_031",
+    "content": "手语动作:\n家,回\n\n\n语义:\n表示返回住所\n\n\n中文表达:\n我要回家\n\n\n用户意图:\nexpress_plan\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_plan",
+      "scenario": "daily",
+      "gloss": [
+        "家",
+        "回"
+      ]
+    }
+  },
+  {
+    "id": "sign_032",
+    "content": "手语动作:\n出去\n\n\n语义:\n表示离开当前位置\n\n\n中文表达:\n我要出去\n\n\n用户意图:\nexpress_plan\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_plan",
+      "scenario": "daily",
+      "gloss": [
+        "出去"
+      ]
+    }
+  },
+  {
+    "id": "sign_033",
+    "content": "手语动作:\n学校,去\n\n\n语义:\n表示前往学校\n\n\n中文表达:\n我要去学校\n\n\n用户意图:\nexpress_plan\n\n\n应用场景:\neducation\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_plan",
+      "scenario": "education",
+      "gloss": [
+        "学校",
+        "去"
+      ]
+    }
+  },
+  {
+    "id": "sign_034",
+    "content": "手语动作:\n工作\n\n\n语义:\n表示进行工作活动\n\n\n中文表达:\n我要去工作\n\n\n用户意图:\nexpress_plan\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_plan",
+      "scenario": "work",
+      "gloss": [
+        "工作"
+      ]
+    }
+  },
+  {
+    "id": "sign_035",
+    "content": "手语动作:\n买\n\n\n语义:\n表示购买物品\n\n\n中文表达:\n我要买东西\n\n\n用户意图:\nshopping\n\n\n应用场景:\nshopping\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "shopping",
+      "scenario": "shopping",
+      "gloss": [
+        "买"
+      ]
+    }
+  },
+  {
+    "id": "sign_036",
+    "content": "手语动作:\n钱,没有\n\n\n语义:\n表示缺少资金\n\n\n中文表达:\n我没有钱\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nanxious",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "describe_state",
+      "scenario": "daily",
+      "gloss": [
+        "钱",
+        "没有"
+      ]
+    }
+  },
+  {
+    "id": "sign_037",
+    "content": "手语动作:\n手机\n\n\n语义:\n表示手机相关需求\n\n\n中文表达:\n我的手机\n\n\n用户意图:\nrefer_object\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "refer_object",
+      "scenario": "daily",
+      "gloss": [
+        "手机"
+      ]
+    }
+  },
+  {
+    "id": "sign_038",
+    "content": "手语动作:\n电话\n\n\n语义:\n表示进行电话交流\n\n\n中文表达:\n我要打电话\n\n\n用户意图:\ncommunication\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "communication",
+      "scenario": "social",
+      "gloss": [
+        "电话"
+      ]
+    }
+  },
+  {
+    "id": "sign_039",
+    "content": "手语动作:\n短信,发送\n\n\n语义:\n表示发送消息\n\n\n中文表达:\n我要发消息\n\n\n用户意图:\ncommunication\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "communication",
+      "scenario": "social",
+      "gloss": [
+        "短信",
+        "发送"
+      ]
+    }
+  },
+  {
+    "id": "sign_040",
+    "content": "手语动作:\n天气\n\n\n语义:\n表示询问天气情况\n\n\n中文表达:\n今天天气怎么样\n\n\n用户意图:\nask_information\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_information",
+      "scenario": "daily",
+      "gloss": [
+        "天气"
+      ]
+    }
+  },
+  {
+    "id": "sign_041",
+    "content": "手语动作:\n雨\n\n\n语义:\n表示天气下雨\n\n\n中文表达:\n下雨了\n\n\n用户意图:\ndescribe_environment\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "describe_environment",
+      "scenario": "daily",
+      "gloss": [
+        "雨"
+      ]
+    }
+  },
+  {
+    "id": "sign_042",
+    "content": "手语动作:\n冷\n\n\n语义:\n表示温度较低或感觉寒冷\n\n\n中文表达:\n我觉得很冷\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nuncomfortable",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "uncomfortable",
+      "intent": "describe_state",
+      "scenario": "daily",
+      "gloss": [
+        "冷"
+      ]
+    }
+  },
+  {
+    "id": "sign_043",
+    "content": "手语动作:\n热\n\n\n语义:\n表示温度较高或感觉炎热\n\n\n中文表达:\n我觉得很热\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nuncomfortable",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "uncomfortable",
+      "intent": "describe_state",
+      "scenario": "daily",
+      "gloss": [
+        "热"
+      ]
+    }
+  },
+  {
+    "id": "sign_044",
+    "content": "手语动作:\n厕所,在哪里\n\n\n语义:\n询问卫生间位置\n\n\n中文表达:\n厕所在哪里\n\n\n用户意图:\nask_direction\n\n\n应用场景:\npublic\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_direction",
+      "scenario": "public",
+      "gloss": [
+        "厕所",
+        "在哪里"
+      ]
+    }
+  },
+  {
+    "id": "sign_045",
+    "content": "手语动作:\n公交车\n\n\n语义:\n表示乘坐公共交通\n\n\n中文表达:\n我要坐公交车\n\n\n用户意图:\ntravel\n\n\n应用场景:\ntransportation\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "travel",
+      "scenario": "transportation",
+      "gloss": [
+        "公交车"
+      ]
+    }
+  },
+  {
+    "id": "sign_046",
+    "content": "手语动作:\n地铁\n\n\n语义:\n表示使用地铁出行\n\n\n中文表达:\n我要坐地铁\n\n\n用户意图:\ntravel\n\n\n应用场景:\ntransportation\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "travel",
+      "scenario": "transportation",
+      "gloss": [
+        "地铁"
+      ]
+    }
+  },
+  {
+    "id": "sign_047",
+    "content": "手语动作:\n迟到\n\n\n语义:\n表示没有按时到达\n\n\n中文表达:\n我要迟到了\n\n\n用户意图:\ndescribe_state\n\n\n应用场景:\nwork\n\n\n情绪状态:\nanxious",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "describe_state",
+      "scenario": "work",
+      "gloss": [
+        "迟到"
+      ]
+    }
+  },
+  {
+    "id": "sign_048",
+    "content": "手语动作:\n等待\n\n\n语义:\n表示需要等待\n\n\n中文表达:\n请等一下\n\n\n用户意图:\ncommunication\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "daily",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "communication",
+      "scenario": "social",
+      "gloss": [
+        "等待"
+      ]
+    }
+  },
+  {
+    "id": "sign_049",
+    "content": "手语动作:\n喜欢\n\n\n语义:\n表示正向偏好\n\n\n中文表达:\n我喜欢这个\n\n\n用户意图:\nexpress_preference\n\n\n应用场景:\ndaily\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_preference",
+      "scenario": "daily",
+      "gloss": [
+        "喜欢"
+      ]
+    }
+  },
+  {
+    "id": "sign_050",
+    "content": "手语动作:\n不喜欢\n\n\n语义:\n表示否定偏好\n\n\n中文表达:\n我不喜欢这个\n\n\n用户意图:\nexpress_preference\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nnegative",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "negative",
+      "intent": "express_preference",
+      "scenario": "daily",
+      "gloss": [
+        "不喜欢"
+      ]
+    }
+  },
+  {
+    "id": "sign_051",
+    "content": "手语动作:\n害怕\n\n\n语义:\n表示恐惧或不安情绪\n\n\n中文表达:\n我有点害怕\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nfear",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "fear",
+      "intent": "express_emotion",
+      "scenario": "daily",
+      "gloss": [
+        "害怕"
+      ]
+    }
+  },
+  {
+    "id": "sign_052",
+    "content": "手语动作:\n紧张\n\n\n语义:\n表示心理压力或紧张状态\n\n\n中文表达:\n我有点紧张\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\ndaily\n\n\n情绪状态:\nanxious",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "express_emotion",
+      "scenario": "daily",
+      "gloss": [
+        "紧张"
+      ]
+    }
+  },
+  {
+    "id": "sign_053",
+    "content": "手语动作:\n生气\n\n\n语义:\n表示愤怒情绪\n\n\n中文表达:\n我很生气\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nangry",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "angry",
+      "intent": "express_emotion",
+      "scenario": "social",
+      "gloss": [
+        "生气"
+      ]
+    }
+  },
+  {
+    "id": "sign_054",
+    "content": "手语动作:\n失望\n\n\n语义:\n表示没有达到期待产生的负面情绪\n\n\n中文表达:\n我很失望\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nsad",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "sad",
+      "intent": "express_emotion",
+      "scenario": "social",
+      "gloss": [
+        "失望"
+      ]
+    }
+  },
+  {
+    "id": "sign_055",
+    "content": "手语动作:\n担心\n\n\n语义:\n表示对某件事情产生忧虑\n\n\n中文表达:\n我很担心\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nanxious",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "express_emotion",
+      "scenario": "social",
+      "gloss": [
+        "担心"
+      ]
+    }
+  },
+  {
+    "id": "sign_056",
+    "content": "手语动作:\n放心\n\n\n语义:\n表示消除担忧后的安心状态\n\n\n中文表达:\n你放心吧\n\n\n用户意图:\ncomfort\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "comfort",
+      "scenario": "social",
+      "gloss": [
+        "放心"
+      ]
+    }
+  },
+  {
+    "id": "sign_057",
+    "content": "手语动作:\n加油\n\n\n语义:\n表示鼓励和支持\n\n\n中文表达:\n加油，你可以的\n\n\n用户意图:\nencourage\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "encourage",
+      "scenario": "social",
+      "gloss": [
+        "加油"
+      ]
+    }
+  },
+  {
+    "id": "sign_058",
+    "content": "手语动作:\n祝福\n\n\n语义:\n表示给予美好祝愿\n\n\n中文表达:\n祝你一切顺利\n\n\n用户意图:\nexpress_wish\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_wish",
+      "scenario": "social",
+      "gloss": [
+        "祝福"
+      ]
+    }
+  },
+  {
+    "id": "sign_059",
+    "content": "手语动作:\n喜欢,你\n\n\n语义:\n表示对他人的喜爱\n\n\n中文表达:\n我喜欢你\n\n\n用户意图:\nexpress_feeling\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_feeling",
+      "scenario": "social",
+      "gloss": [
+        "喜欢",
+        "你"
+      ]
+    }
+  },
+  {
+    "id": "sign_060",
+    "content": "手语动作:\n想念\n\n\n语义:\n表示思念某人\n\n\n中文表达:\n我想你了\n\n\n用户意图:\nexpress_feeling\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_feeling",
+      "scenario": "social",
+      "gloss": [
+        "想念"
+      ]
+    }
+  },
+  {
+    "id": "sign_061",
+    "content": "手语动作:\n朋友\n\n\n语义:\n表示朋友关系\n\n\n中文表达:\n他是我的朋友\n\n\n用户意图:\nintroduce_relation\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "introduce_relation",
+      "scenario": "social",
+      "gloss": [
+        "朋友"
+      ]
+    }
+  },
+  {
+    "id": "sign_062",
+    "content": "手语动作:\n认识\n\n\n语义:\n表示建立认识关系\n\n\n中文表达:\n我们认识一下\n\n\n用户意图:\nsocial_interaction\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "social_interaction",
+      "scenario": "social",
+      "gloss": [
+        "认识"
+      ]
+    }
+  },
+  {
+    "id": "sign_063",
+    "content": "手语动作:\n见面\n\n\n语义:\n表示希望与他人面对面交流\n\n\n中文表达:\n我们什么时候见面\n\n\n用户意图:\nmake_plan\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "make_plan",
+      "scenario": "social",
+      "gloss": [
+        "见面"
+      ]
+    }
+  },
+  {
+    "id": "sign_064",
+    "content": "手语动作:\n聊天\n\n\n语义:\n表示进行交流沟通\n\n\n中文表达:\n我们聊聊天吧\n\n\n用户意图:\ncommunication\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "communication",
+      "scenario": "social",
+      "gloss": [
+        "聊天"
+      ]
+    }
+  },
+  {
+    "id": "sign_065",
+    "content": "手语动作:\n谢谢,你\n\n\n语义:\n表达感谢对方\n\n\n中文表达:\n谢谢你\n\n\n用户意图:\nexpress_gratitude\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_gratitude",
+      "scenario": "social",
+      "gloss": [
+        "谢谢",
+        "你"
+      ]
+    }
+  },
+  {
+    "id": "sign_066",
+    "content": "手语动作:\n对不起\n\n\n语义:\n表示歉意\n\n\n中文表达:\n对不起\n\n\n用户意图:\napologize\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nnegative",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "negative",
+      "intent": "apologize",
+      "scenario": "social",
+      "gloss": [
+        "对不起"
+      ]
+    }
+  },
+  {
+    "id": "sign_067",
+    "content": "手语动作:\n没关系\n\n\n语义:\n表示接受道歉或安慰\n\n\n中文表达:\n没关系\n\n\n用户意图:\ncomfort\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "comfort",
+      "scenario": "social",
+      "gloss": [
+        "没关系"
+      ]
+    }
+  },
+  {
+    "id": "sign_068",
+    "content": "手语动作:\n帮助,谢谢\n\n\n语义:\n表示感谢别人提供帮助\n\n\n中文表达:\n谢谢你的帮助\n\n\n用户意图:\nexpress_gratitude\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_gratitude",
+      "scenario": "social",
+      "gloss": [
+        "帮助",
+        "谢谢"
+      ]
+    }
+  },
+  {
+    "id": "sign_069",
+    "content": "手语动作:\n一起\n\n\n语义:\n表示希望共同完成某件事情\n\n\n中文表达:\n我们一起吧\n\n\n用户意图:\ninvite\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "invite",
+      "scenario": "social",
+      "gloss": [
+        "一起"
+      ]
+    }
+  },
+  {
+    "id": "sign_070",
+    "content": "手语动作:\n等待,朋友\n\n\n语义:\n表示等待朋友到来\n\n\n中文表达:\n我等朋友\n\n\n用户意图:\ndescribe_action\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "describe_action",
+      "scenario": "social",
+      "gloss": [
+        "等待",
+        "朋友"
+      ]
+    }
+  },
+  {
+    "id": "sign_071",
+    "content": "手语动作:\n问题\n\n\n语义:\n表示遇到困难或需要讨论的问题\n\n\n中文表达:\n我有一个问题\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "request_help",
+      "scenario": "social",
+      "gloss": [
+        "问题"
+      ]
+    }
+  },
+  {
+    "id": "sign_072",
+    "content": "手语动作:\n不知道\n\n\n语义:\n表示缺少相关信息\n\n\n中文表达:\n我不知道\n\n\n用户意图:\nexpress_state\n\n\n应用场景:\nsocial\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "express_state",
+      "scenario": "social",
+      "gloss": [
+        "不知道"
+      ]
+    }
+  },
+  {
+    "id": "sign_073",
+    "content": "手语动作:\n明白\n\n\n语义:\n表示理解对方表达\n\n\n中文表达:\n我明白了\n\n\n用户意图:\nconfirm_understanding\n\n\n应用场景:\nsocial\n\n\n情绪状态:\npositive",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "confirm_understanding",
+      "scenario": "social",
+      "gloss": [
+        "明白"
+      ]
+    }
+  },
+  {
+    "id": "sign_074",
+    "content": "手语动作:\n重复\n\n\n语义:\n表示请求再次表达\n\n\n中文表达:\n请再说一次\n\n\n用户意图:\nrequest_clarification\n\n\n应用场景:\ncommunication\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "request_clarification",
+      "scenario": "communication",
+      "gloss": [
+        "重复"
+      ]
+    }
+  },
+  {
+    "id": "sign_075",
+    "content": "手语动作:\n慢一点\n\n\n语义:\n表示希望降低交流速度\n\n\n中文表达:\n请慢一点\n\n\n用户意图:\nrequest_adjustment\n\n\n应用场景:\ncommunication\n\n\n情绪状态:\nneutral",
+    "category": "social",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "request_adjustment",
+      "scenario": "communication",
+      "gloss": [
+        "慢一点"
+      ]
+    }
+  },
+  {
+    "id": "sign_076",
+    "content": "手语动作:\n银行\n\n\n语义:\n表示前往银行或办理金融业务\n\n\n中文表达:\n我要去银行\n\n\n用户意图:\nseek_service\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "seek_service",
+      "scenario": "public_service",
+      "gloss": [
+        "银行"
+      ]
+    }
+  },
+  {
+    "id": "sign_077",
+    "content": "手语动作:\n取钱\n\n\n语义:\n表示进行取款操作\n\n\n中文表达:\n我要取钱\n\n\n用户意图:\nseek_service\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "seek_service",
+      "scenario": "public_service",
+      "gloss": [
+        "取钱"
+      ]
+    }
+  },
+  {
+    "id": "sign_078",
+    "content": "手语动作:\n身份证\n\n\n语义:\n表示身份信息相关事项\n\n\n中文表达:\n我的身份证\n\n\n用户意图:\nrefer_object\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "refer_object",
+      "scenario": "public_service",
+      "gloss": [
+        "身份证"
+      ]
+    }
+  },
+  {
+    "id": "sign_079",
+    "content": "手语动作:\n丢失\n\n\n语义:\n表示物品遗失\n\n\n中文表达:\n我的东西丢了\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nanxious",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "request_help",
+      "scenario": "public_service",
+      "gloss": [
+        "丢失"
+      ]
+    }
+  },
+  {
+    "id": "sign_080",
+    "content": "手语动作:\n警察\n\n\n语义:\n表示寻求警察帮助\n\n\n中文表达:\n我要找警察\n\n\n用户意图:\nseek_help\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nanxious",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "seek_help",
+      "scenario": "public_service",
+      "gloss": [
+        "警察"
+      ]
+    }
+  },
+  {
+    "id": "sign_081",
+    "content": "手语动作:\n报警\n\n\n语义:\n表示需要报警处理问题\n\n\n中文表达:\n我要报警\n\n\n用户意图:\nemergency_help\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nurgent",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "urgent",
+      "intent": "emergency_help",
+      "scenario": "public_service",
+      "gloss": [
+        "报警"
+      ]
+    }
+  },
+  {
+    "id": "sign_082",
+    "content": "手语动作:\n帮助,警察\n\n\n语义:\n表示请求公共安全帮助\n\n\n中文表达:\n请警察帮助我\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nanxious",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "request_help",
+      "scenario": "public_service",
+      "gloss": [
+        "帮助",
+        "警察"
+      ]
+    }
+  },
+  {
+    "id": "sign_083",
+    "content": "手语动作:\n地图\n\n\n语义:\n表示需要查看位置或路线\n\n\n中文表达:\n给我看看地图\n\n\n用户意图:\nask_direction\n\n\n应用场景:\npublic_service\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_direction",
+      "scenario": "public_service",
+      "gloss": [
+        "地图"
+      ]
+    }
+  },
+  {
+    "id": "sign_084",
+    "content": "手语动作:\n车站\n\n\n语义:\n表示询问交通站点\n\n\n中文表达:\n车站在哪里\n\n\n用户意图:\nask_direction\n\n\n应用场景:\ntransportation\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "ask_direction",
+      "scenario": "transportation",
+      "gloss": [
+        "车站"
+      ]
+    }
+  },
+  {
+    "id": "sign_085",
+    "content": "手语动作:\n火车\n\n\n语义:\n表示乘坐火车出行\n\n\n中文表达:\n我要坐火车\n\n\n用户意图:\ntravel\n\n\n应用场景:\ntransportation\n\n\n情绪状态:\nneutral",
+    "category": "public",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "travel",
+      "scenario": "transportation",
+      "gloss": [
+        "火车"
+      ]
+    }
+  },
+  {
+    "id": "sign_086",
+    "content": "手语动作:\n老师\n\n\n语义:\n表示教师或教学相关对象\n\n\n中文表达:\n老师您好\n\n\n用户意图:\ncommunication\n\n\n应用场景:\neducation\n\n\n情绪状态:\npositive",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "communication",
+      "scenario": "education",
+      "gloss": [
+        "老师"
+      ]
+    }
+  },
+  {
+    "id": "sign_087",
+    "content": "手语动作:\n学习\n\n\n语义:\n表示进行学习活动\n\n\n中文表达:\n我要学习\n\n\n用户意图:\nexpress_plan\n\n\n应用场景:\neducation\n\n\n情绪状态:\npositive",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_plan",
+      "scenario": "education",
+      "gloss": [
+        "学习"
+      ]
+    }
+  },
+  {
+    "id": "sign_088",
+    "content": "手语动作:\n考试\n\n\n语义:\n表示参加考试\n\n\n中文表达:\n我要考试了\n\n\n用户意图:\ndescribe_event\n\n\n应用场景:\neducation\n\n\n情绪状态:\nanxious",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "anxious",
+      "intent": "describe_event",
+      "scenario": "education",
+      "gloss": [
+        "考试"
+      ]
+    }
+  },
+  {
+    "id": "sign_089",
+    "content": "手语动作:\n作业\n\n\n语义:\n表示学习任务\n\n\n中文表达:\n我要写作业\n\n\n用户意图:\ndescribe_task\n\n\n应用场景:\neducation\n\n\n情绪状态:\nneutral",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "describe_task",
+      "scenario": "education",
+      "gloss": [
+        "作业"
+      ]
+    }
+  },
+  {
+    "id": "sign_090",
+    "content": "手语动作:\n问题,问\n\n\n语义:\n表示提出学习问题\n\n\n中文表达:\n我有问题想问\n\n\n用户意图:\nrequest_help\n\n\n应用场景:\neducation\n\n\n情绪状态:\nneutral",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "request_help",
+      "scenario": "education",
+      "gloss": [
+        "问题",
+        "问"
+      ]
+    }
+  },
+  {
+    "id": "sign_091",
+    "content": "手语动作:\n电脑\n\n\n语义:\n表示计算机设备\n\n\n中文表达:\n我的电脑\n\n\n用户意图:\nrefer_object\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "refer_object",
+      "scenario": "work",
+      "gloss": [
+        "电脑"
+      ]
+    }
+  },
+  {
+    "id": "sign_092",
+    "content": "手语动作:\n会议\n\n\n语义:\n表示参加工作会议\n\n\n中文表达:\n我要参加会议\n\n\n用户意图:\ndescribe_event\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "describe_event",
+      "scenario": "work",
+      "gloss": [
+        "会议"
+      ]
+    }
+  },
+  {
+    "id": "sign_093",
+    "content": "手语动作:\n文件\n\n\n语义:\n表示工作文件资料\n\n\n中文表达:\n这是我的文件\n\n\n用户意图:\nrefer_object\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "refer_object",
+      "scenario": "work",
+      "gloss": [
+        "文件"
+      ]
+    }
+  },
+  {
+    "id": "sign_094",
+    "content": "手语动作:\n完成\n\n\n语义:\n表示任务已经结束\n\n\n中文表达:\n我完成了\n\n\n用户意图:\nreport_status\n\n\n应用场景:\nwork\n\n\n情绪状态:\npositive",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "report_status",
+      "scenario": "work",
+      "gloss": [
+        "完成"
+      ]
+    }
+  },
+  {
+    "id": "sign_095",
+    "content": "手语动作:\n开始\n\n\n语义:\n表示启动某项活动\n\n\n中文表达:\n开始吧\n\n\n用户意图:\ninstruction\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "instruction",
+      "scenario": "work",
+      "gloss": [
+        "开始"
+      ]
+    }
+  },
+  {
+    "id": "sign_096",
+    "content": "手语动作:\n停止\n\n\n语义:\n表示终止当前活动\n\n\n中文表达:\n请停止\n\n\n用户意图:\ninstruction\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "instruction",
+      "scenario": "work",
+      "gloss": [
+        "停止"
+      ]
+    }
+  },
+  {
+    "id": "sign_097",
+    "content": "手语动作:\n等待,通知\n\n\n语义:\n表示等待进一步消息\n\n\n中文表达:\n请等待通知\n\n\n用户意图:\ncommunication\n\n\n应用场景:\nwork\n\n\n情绪状态:\nneutral",
+    "category": "work",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "communication",
+      "scenario": "work",
+      "gloss": [
+        "等待",
+        "通知"
+      ]
+    }
+  },
+  {
+    "id": "sign_098",
+    "content": "手语动作:\n成功\n\n\n语义:\n表示任务完成或取得成果\n\n\n中文表达:\n成功了\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\nwork\n\n\n情绪状态:\npositive",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_emotion",
+      "scenario": "work",
+      "gloss": [
+        "成功"
+      ]
+    }
+  },
+  {
+    "id": "sign_099",
+    "content": "手语动作:\n失败\n\n\n语义:\n表示事情没有达到预期\n\n\n中文表达:\n失败了\n\n\n用户意图:\nexpress_emotion\n\n\n应用场景:\nwork\n\n\n情绪状态:\nnegative",
+    "category": "emotion",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "negative",
+      "intent": "express_emotion",
+      "scenario": "work",
+      "gloss": [
+        "失败"
+      ]
+    }
+  },
+  {
+    "id": "sign_100",
+    "content": "手语动作:\n谢谢,老师\n\n\n语义:\n表示感谢教师帮助\n\n\n中文表达:\n谢谢老师\n\n\n用户意图:\nexpress_gratitude\n\n\n应用场景:\neducation\n\n\n情绪状态:\npositive",
+    "category": "education",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "positive",
+      "intent": "express_gratitude",
+      "scenario": "education",
+      "gloss": [
+        "谢谢",
+        "老师"
+      ]
+    }
+  },
+  {
+    "id": "culture_001",
+    "content": "文化表达:\n拍拍胸口\n\n\n字面含义:\n手拍击胸部\n\n\n真实含义:\n表示保证、放心、我负责\n\n\n情绪:\nconfident",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "confident"
+    }
+  },
+  {
+    "id": "culture_002",
+    "content": "文化表达:\n竖大拇指\n\n\n字面含义:\n拇指向上\n\n\n真实含义:\n表示认可、赞扬\n\n\n情绪:\npositive",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "positive"
+    }
+  },
+  {
+    "id": "culture_003",
+    "content": "文化表达:\n摇头\n\n\n字面含义:\n左右移动头部\n\n\n真实含义:\n表示否定或者拒绝\n\n\n情绪:\nneutral",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "neutral"
+    }
+  },
+  {
+    "id": "culture_004",
+    "content": "文化表达:\n点头\n\n\n字面含义:\n上下移动头部\n\n\n真实含义:\n表示同意或者确认\n\n\n情绪:\npositive",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "positive"
+    }
+  },
+  {
+    "id": "culture_005",
+    "content": "文化表达:\n抱拳\n\n\n字面含义:\n双手合抱\n\n\n真实含义:\n中国传统礼貌表达\n\n\n情绪:\nrespect",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "respect"
+    }
+  },
+  {
+    "id": "culture_006",
+    "content": "文化表达:\n摆手\n\n\n字面含义:\n左右摆动手掌\n\n\n真实含义:\n可能表示拒绝、不要或者告别\n\n\n情绪:\nneutral",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "neutral"
+    }
+  },
+  {
+    "id": "medical_001",
+    "content": "医疗场景关键词:\n头疼,头痛\n\n\n医学知识:\n头痛需要进一步了解疼痛位置、持续时间和严重程度\n\n\n回应策略:\n询问症状细节",
+    "category": "medical",
+    "source": "scenario_medical",
+    "metadata": {
+      "scenario": "hospital"
+    }
+  },
+  {
+    "id": "medical_002",
+    "content": "医疗场景关键词:\n肚子疼,腹痛\n\n\n医学知识:\n腹痛可能涉及消化系统问题，需要确认疼痛区域\n\n\n回应策略:\n建议描述疼痛位置",
+    "category": "medical",
+    "source": "scenario_medical",
+    "metadata": {
+      "scenario": "hospital"
+    }
+  },
+  {
+    "id": "medical_003",
+    "content": "医疗场景关键词:\n发烧\n\n\n医学知识:\n发热通常需要关注体温变化\n\n\n回应策略:\n询问体温和持续时间",
+    "category": "medical",
+    "source": "scenario_medical",
+    "metadata": {
+      "scenario": "hospital"
+    }
+  },
+  {
+    "id": "medical_004",
+    "content": "医疗场景关键词:\n受伤\n\n\n医学知识:\n外伤情况需要判断伤口严重程度\n\n\n回应策略:\n建议及时处理",
+    "category": "medical",
+    "source": "scenario_medical",
+    "metadata": {
+      "scenario": "hospital"
+    }
+  },
+  {
+    "id": "medical_005",
+    "content": "医疗场景关键词:\n焦虑,害怕\n\n\n医学知识:\n用户可能需要安慰和情绪支持\n\n\n回应策略:\n提供情绪回应",
+    "category": "medical",
+    "source": "scenario_medical",
+    "metadata": {
+      "scenario": "hospital"
+    }
+  }
+]
