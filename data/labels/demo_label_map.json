@@ -1,0 +1,28 @@
+{
+  "阿姨": {
+    "sign_sequence": ["阿姨"],
+    "token_details": [
+      {
+        "token": "阿姨",
+        "start_sec": 0.0,
+        "end_sec": 1.0,
+        "confidence": 0.95,
+        "modalities": ["hand"]
+      }
+    ],
+    "overall_confidence": 0.95
+  },
+  "药": {
+    "sign_sequence": ["药"],
+    "token_details": [
+      {
+        "token": "药",
+        "start_sec": 0.0,
+        "end_sec": 1.0,
+        "confidence": 0.92,
+        "modalities": ["hand"]
+      }
+    ],
+    "overall_confidence": 0.92
+  }
+}
