@@ -68,6 +68,7 @@
   .layer-core strong { font-size: 27px; }
 
   .capabilities-layout { grid-template-columns: .92fr 1.08fr; gap: 32px; }
+  .capabilities-rail span { padding-inline: 12px; }
   .capability-visual { height: 540px; }
   .capability-item__body > strong { font-size: 24px; }
 
@@ -116,10 +117,11 @@
   .input-boundary__tag { grid-column: 2; }
 
   .capabilities-layout { grid-template-columns: 1fr; }
+  .capabilities-rail { margin-top: 44px; }
   .capabilities-sticky { grid-row: 1; }
   .capability-visual { position: relative; top: auto; height: 520px; }
-  .capability-item { min-height: 200px; }
-  .capability-item button { min-height: 200px; }
+  .capability-item { min-height: 185px; }
+  .capability-item button { min-height: 185px; }
 
   .case-story__flow { grid-template-columns: 1fr; gap: 0; padding-top: 20px; }
   .case-story__connector { min-height: 36px; justify-content: center; transform: rotate(90deg); }
@@ -137,7 +139,7 @@
   .journey-section__heading { grid-template-columns: 1fr; }
   .journey-track { grid-template-columns: 1fr 1fr; gap: 30px 0; }
   .journey-track__line { display: none; }
-  .journey-stage { min-height: 300px; padding-right: 38px; border-top: 1px solid var(--border-soft); }
+  .journey-stage { min-height: 270px; padding-right: 38px; border-top: 1px solid var(--border-soft); }
   .journey-stage__top { padding-top: 18px; }
   .journey-stage__marker svg { display: none; }
   .journey-destination { grid-template-columns: 1fr; gap: 18px; padding: 30px; }
@@ -179,14 +181,19 @@
   .hero__input-rail > span:not(:first-child) { display: none; }
 
   .layer-section__heading-row { gap: 30px; }
-  .layer-visual { height: 980px; margin-top: 54px; }
+  .layer-visual { height: 920px; margin-top: 46px; }
   .layer-visual__column { width: calc(100% - 32px); grid-template-columns: 1fr 1fr; }
   .layer-visual__column--input { top: 410px; bottom: auto; }
   .layer-visual__column--output { right: 16px; bottom: 20px; }
   .layer-core { top: 185px; width: 225px; height: 190px; }
   .input-boundary { margin-inline: 0; padding: 18px; }
 
-  .capabilities-layout { margin-top: 52px; }
+  .capabilities-rail { min-height: 52px; margin-top: 38px; }
+  .capabilities-rail span { justify-content: center; padding-inline: 4px; }
+  .capabilities-rail span:not(:last-child)::after { display: none; }
+  .capabilities-rail small { display: none; }
+  .capabilities-rail strong { font-size: 8px; letter-spacing: .03em; }
+  .capabilities-layout { margin-top: 36px; }
   .capability-visual { height: 390px; }
   .capability-item button { grid-template-columns: 42px 1fr; gap: 12px; padding-block: 28px; }
   .capability-item__body > strong { font-size: 21px; }
@@ -210,18 +217,19 @@
   .status-list { padding: 20px; }
   .status-console__footer span:last-child { display: none; }
 
-  .journey-track { grid-template-columns: 1fr; margin-top: 60px; }
-  .journey-stage { min-height: 245px; }
+  .journey-track { grid-template-columns: 1fr; margin-top: 48px; }
+  .journey-stage { min-height: 225px; }
   .journey-destination > p { align-items: flex-start; flex-direction: column; gap: 8px; }
 
-  .scenarios-list { margin-top: 58px; }
+  .scenarios-list { margin-top: 46px; }
   .scenario-row { grid-template-columns: 1fr; }
-  .scenario-row__copy { min-height: 380px; padding: 42px 14px 38px 0; border-right: 0; }
+  .scenario-row__copy { min-height: 340px; padding: 36px 14px 32px 0; border-right: 0; }
   .scenario-row__index { margin-bottom: 28px; }
   .scenario-row__copy h3 { font-size: 30px; }
   .scenario-row__interface { margin-top: 30px; }
   .scenario-row__visual { min-height: 330px; padding: 10px; }
-  .scenario-visual { min-height: 310px; }
+  .scenario-visual { height: 310px; min-height: 0; }
+  .scenario-row__number { display: none; }
 
   .feedback-form { padding: 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
@@ -229,7 +237,7 @@
   .feedback-success { min-height: 580px; padding: 28px 20px; }
   .feedback-success__id { min-width: 0; width: 100%; }
 
-  .closing-section__statement { min-height: 540px; }
+  .closing-section__statement { min-height: 480px; }
   .closing-section__statement h2 { font-size: 42px; line-height: 1.2; }
   .footer { grid-template-columns: 1fr; }
   .footer__status { align-items: flex-start; }

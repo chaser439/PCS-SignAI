@@ -6,6 +6,7 @@ export interface SemanticCase {
   baseline: string
   understanding: string
   tags: string[]
+  confidence: string
   tone: 'care' | 'culture' | 'urgent'
 }
 
@@ -18,6 +19,7 @@ export const semanticCases: SemanticCase[] = [
     baseline: '用户提到了妈妈和药。',
     understanding: '用户可能正在提醒妈妈按时服药。',
     tags: ['User Memory', 'Family Care'],
+    confidence: '94%',
     tone: 'care',
   },
   {
@@ -28,6 +30,7 @@ export const semanticCases: SemanticCase[] = [
     baseline: '吃饭。',
     understanding: '用户可能准备参加婚宴或宴席。',
     tags: ['Chinese Knowledge', 'Cultural Context'],
+    confidence: '91%',
     tone: 'culture',
   },
   {
@@ -38,6 +41,7 @@ export const semanticCases: SemanticCase[] = [
     baseline: '用户正在请求帮助。',
     understanding: '用户当前情绪焦虑，可能正在请求紧急帮助。',
     tags: ['Emotion', 'Urgency Understanding'],
+    confidence: '96%',
     tone: 'urgent',
   },
 ]

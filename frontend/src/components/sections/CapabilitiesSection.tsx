@@ -4,6 +4,8 @@ import { capabilities } from '../../data/capabilities'
 import { CapabilityVisual } from '../visuals/CapabilityVisual'
 import { SectionHeading } from '../ui/SectionHeading'
 
+const semanticFlow = ['Token', 'Knowledge', 'Memory', 'Emotion', 'Intent']
+
 export function CapabilitiesSection() {
   const [active, setActive] = useState(0)
   const itemRefs = useRef<(HTMLElement | null)[]>([])
@@ -26,6 +28,11 @@ export function CapabilitiesSection() {
     <section id="capabilities" className="capabilities-section section-shell">
       <div className="container">
         <SectionHeading eyebrow="Core Intelligence" title={<>从动作解析，<br />到真实意图。</>} />
+        <div className="capabilities-rail" aria-label="Semantic understanding flow">
+          {semanticFlow.map((label, index) => (
+            <span key={label}><small>{String(index + 1).padStart(2, '0')}</small><strong>{label}</strong></span>
+          ))}
+        </div>
         <div className="capabilities-layout">
           <div className="capabilities-list">
             {capabilities.map((capability, index) => (

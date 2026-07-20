@@ -22,7 +22,7 @@
   --shadow-float: 0 18px 42px rgba(21, 63, 57, 0.13);
   --container: 1440px;
   --gutter: 52px;
-  --section-space: 156px;
+  --section-space: 112px;
   --radius-sm: 4px;
   --radius-md: 8px;
   --font-sans: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", Inter, system-ui, sans-serif;
@@ -32,13 +32,13 @@
 @media (max-width: 1180px) {
   :root {
     --gutter: 32px;
-    --section-space: 126px;
+    --section-space: 96px;
   }
 }
 
 @media (max-width: 720px) {
   :root {
     --gutter: 20px;
-    --section-space: 92px;
+    --section-space: 76px;
   }
 }

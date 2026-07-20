@@ -49,7 +49,7 @@ export function CasesSection() {
               <div className="case-story__header">
                 <span>{item.index}</span>
                 <div><small>USE CASE</small><h3>{item.category}</h3></div>
-                <span className="case-story__signal"><i />Context signal captured</span>
+                <span className="case-story__signal"><i />Context signal captured <strong>{item.confidence}</strong></span>
               </div>
               <div className="case-story__flow">
                 <div className="case-step case-step--input">
