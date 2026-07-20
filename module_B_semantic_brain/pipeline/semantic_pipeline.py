@@ -262,31 +262,69 @@ class SemanticPipeline:
         # ======================
 
 
-        result = SemanticResult(
+        return {
 
-            user_id=user_id,
+            "schema_version": "1.0",
 
-            input_signs=
-            sign_input["sign_sequence"],
+            "video_id":
+                sign_input.get(
+                    "video_id",
+                    ""
+                ),
 
-
-            rag_evidence=[
-
-                d.content
-
-                for d in knowledge_docs
-
-            ],
+            "user_id":
+                user_id,
 
 
-            memory_evidence=
-
-            memory_results,
-
-
-            result=response
-
-        )
+            "status":
+                "ok",
 
 
-        return result.to_dict()
+            "input_sign_sequence":
+                sign_input["sign_sequence"],
+
+
+            "rag_evidence":
+                [
+                    d.content
+                    for d in knowledge_docs
+                ],
+
+
+            "memory_evidence":
+                memory_results,
+
+
+            "semantic_result":
+                {
+
+                    "expression":
+                        response.get(
+                            "expression",
+                            ""
+                        ),
+
+
+                    "intent":
+                        response.get(
+                            "intent",
+                            "unknown"
+                        ),
+
+
+                    "emotion":
+                        response.get(
+                            "emotion",
+                            "neutral"
+                        ),
+
+
+                    "confidence":
+                        response.get(
+                            "confidence",
+                            0
+                        )
+
+                }
+
+        }

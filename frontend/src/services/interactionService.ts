@@ -1,4 +1,3 @@
-import { builtInCases } from './localData'
 import { semanticService } from './semanticService'
 import { signService } from './signService'
 import type { InteractionRequest, InteractionResult } from './serviceTypes'
@@ -35,17 +34,52 @@ export const interactionService = {
   provider: 'local' as const,
   async process(request: InteractionRequest): Promise<InteractionResult> {
     if (request.direction === 'sign-to-language') {
-      const selected = builtInCases.find((item) => item.id === request.caseId) ?? builtInCases[0]
-      const signResult = await signService.analyze({ caseId: selected.id, file: request.file, userId: request.userId })
-      const semanticResult = await semanticService.understand(signResult, selected.id)
+
+
+      const signResult = await signService.analyze({
+
+        file: request.file,
+
+        userId: request.userId
+
+      })
+
+
+      const semanticResult =
+          await semanticService.understand(
+            signResult
+          )
+      console.log(
+        "Module B Result:",
+        semanticResult
+      )
+
+
       return {
-        baselineText: selected.baseline,
-        polishedText: semanticResult.inferred_intent,
-        emotion: semanticResult.emotion,
-        tokens: signResult.sign_sequence,
+
+        baselineText:
+          signResult.sign_sequence.join(' '),
+
+
+        polishedText:
+          semanticResult.normalized_text,
+
+
+        emotion:
+          semanticResult.emotion,
+
+
+        tokens:
+          signResult.sign_sequence,
+
+
         signResult,
-        semanticResult,
+
+
+        semanticResult
+
       }
+
     }
 
     const polishedText = polishSourceText(request.sourceText ?? '')

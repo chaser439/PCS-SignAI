@@ -32,6 +32,8 @@ from __future__ import annotations
 import json
 import logging
 import sys
+import requests
+import argparse
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -324,61 +326,241 @@ def run_inference(
         return _build_error_output(video_id, user_id, video_path, "UNKNOWN_ERROR", str(e))
 
 
+def _get_demo_videos() -> List[Path]:
+    """
+    自动读取 demo_cases 目录下所有支持的视频文件。
+
+    返回:
+        List[Path]
+    """
+
+    demo_dir = PROJECT_ROOT / "demo_cases"
+
+    if not demo_dir.exists():
+        return []
+
+    videos = []
+
+    for file in demo_dir.iterdir():
+
+        if (
+            file.is_file()
+            and file.suffix.lower()
+            in SUPPORTED_VIDEO_SUFFIXES
+        ):
+            videos.append(file)
+
+
+    return sorted(videos)
+
+
 # ==========================================================
 # 命令行入口（独立测试）
 # ==========================================================
 
 def main() -> None:
-    """命令行入口：运行推理流水线并打印结果。"""
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+    """
+    Module A 命令行入口。
+
+    使用方式：
+
+    1. 默认读取 demo_cases 中第一个视频：
+    
+        python -m module_A_sign_encoder.inference
+
+
+    2. 指定视频：
+
+        python -m module_A_sign_encoder.inference \
+        --video demo_cases/test.mp4
+
+
+    输出：
+        outputs/sign_output.json
+
+    该 JSON 将作为 Module B 输入。
+    """
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s"
+    )
+
+
+    # ======================================================
+    # 参数解析
+    # ======================================================
+
+    parser = argparse.ArgumentParser(
+        description="Module A Sign Encoder Inference"
+    )
+
+
+    parser.add_argument(
+        "--video",
+        type=str,
+        default=None,
+        help="输入手语视频路径"
+    )
+
+
+    parser.add_argument(
+        "--user-id",
+        type=str,
+        default="test_user_001",
+        help="用户ID，用于个性化记忆"
+    )
+
+
+    args = parser.parse_args()
+
+
 
     print("=" * 70)
     print("Module A 推理流水线 (inference.py)")
     print("=" * 70)
 
-    # ==========================================================
-    # 修改这里测试不同视频
-    # ==========================================================
-    test_video = PROJECT_ROOT / "demo_cases" / "阿姨.mp4"
 
-    if not test_video.exists():
-        print(f"❌ 测试视频不存在: {test_video}")
-        print("请将测试视频放入 demo_cases 目录")
+
+    # ======================================================
+    # 视频选择
+    # ======================================================
+
+    if args.video:
+
+        videos = [
+            Path(args.video)
+        ]
+
+    else:
+
+        videos = _get_demo_videos()
+
+
+
+    if not videos:
+
+        print(
+            "❌ 未找到输入视频"
+        )
+
+        print(
+            f"支持格式: {SUPPORTED_VIDEO_SUFFIXES}"
+        )
+
         sys.exit(1)
 
-    print(f"✅ 测试视频: {test_video.name}")
 
-    # 执行流水线
-    result = run_inference(
-        video_path=test_video,
-        user_id="test_user_001",
+
+    print(
+        f"✅ 找到 {len(videos)} 个视频:"
     )
 
-    # 打印结果
-    print("\n" + "-" * 70)
-    print("输出结果 (sign_output.json)")
-    print("-" * 70)
 
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    for video in videos:
 
-    print("\n" + "-" * 70)
-    print("关键指标")
-    print("-" * 70)
-    print(f"  状态: {result['status']}")
-    print(f"  sign_sequence: {result.get('sign_sequence', [])}")
-    print(f"  整体置信度: {result.get('overall_confidence', 0.0)}")
-    print(f"  帧数: {result.get('frame_count', 0)}")
-    print(f"  FPS: {result.get('fps', 0.0)}")
+        print(
+            f"   - {video.name}"
+        )
 
-    if result["status"] == "error":
-        print(f"  ❌ 错误: {result.get('error', {}).get('message', '未知错误')}")
-    else:
-        print("  ✅ 处理成功")
 
-    print("\n" + "=" * 70)
-    print(f"输出文件已保存: {DEFAULT_OUTPUT_PATH}")
+
+    # ======================================================
+    # 执行Module A
+    # ======================================================
+
+    for video_path in videos:
+
+
+        print("\n")
+
+        print("=" * 70)
+
+        print(
+            f"开始处理: {video_path.name}"
+        )
+
+        print("=" * 70)
+
+
+
+        result = run_inference(
+
+            video_path=video_path,
+
+            user_id=args.user_id
+
+        )
+
+
+
+        print("\n")
+
+        print("-" * 70)
+
+        print("Module A 输出")
+
+        print("-" * 70)
+
+
+
+        print(
+            json.dumps(
+                result,
+                ensure_ascii=False,
+                indent=2
+            )
+        )
+
+
+
+        print("\n关键结果:")
+
+
+        print(
+            "手语序列:",
+            result.get(
+                "sign_sequence",
+                []
+            )
+        )
+
+
+        print(
+            "置信度:",
+            result.get(
+                "overall_confidence",
+                0
+            )
+        )
+
+
+        print(
+            "状态:",
+            result.get(
+                "status"
+            )
+        )
+
+
+
+    print("\n")
+
+    print("=" * 70)
+
+    print(
+        "Module A 推理完成"
+    )
+
+    print(
+        "输出文件:"
+        f"{DEFAULT_OUTPUT_PATH}"
+    )
+
     print("=" * 70)
 
 
+
 if __name__ == "__main__":
+
     main()

@@ -1,110 +1,146 @@
-# ==============================
+# ==================================================
+# PCS-SignAI Project Git Ignore
+# ==================================================
+
+
+# ==================================================
 # Frontend: React / Vite
-# ==============================
+# ==================================================
+
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 frontend/coverage/
 
-# Frontend environment files
+# Frontend environment
 frontend/.env
 frontend/.env.*
 !frontend/.env.example
 
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
 
-# ==============================
+# ==================================================
 # Python
-# ==============================
+# ==================================================
+
+# Cache
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
+
+# Test / analysis cache
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
 
-# Python virtual environments
+
+# Virtual environments
 .venv/
+**/.venv/
 venv/
 env/
 ENV/
 
-# ==============================
-# IDE / Editor
-# ==============================
-.vscode/
-.idea/
-*.code-workspace
 
-# ==============================
-# Operating system
-# ==============================
-.DS_Store
-Thumbs.db
-desktop.ini
+# ==================================================
+# Runtime generated files
+# ==================================================
 
-# ==============================
-# Temporary files
-# ==============================
+# Uploaded user videos
+uploads/
+**/uploads/
+
+# Inference outputs
+outputs/
+**/outputs/
+
+# Runtime logs
+logs/
+**/logs/
+
+
+# Temporary generated files
 *.tmp
 *.temp
 *.swp
 *.swo
 *~
 
-# ==============================
-# Local secrets
-# ==============================
-.env
-.env.*
-!.env.example
-# =====================
-# Python environment
-# =====================
 
-**/.venv/
+# ==================================================
+# Machine Learning Generated Files
+# ==================================================
 
+# Model cache
+*.pt
+*.pth
+*.ckpt
+*.onnx
 
-# =====================
-# Environment variables
-# =====================
-
-**/.env
+# HuggingFace cache
+.cache/
+huggingface/
 
 
-# =====================
-# Python cache
-# =====================
-
-**/__pycache__/
-**/*.py[cod]
-
-
-# =====================
-# IDE
-# =====================
+# ==================================================
+# IDE / Editor
+# ==================================================
 
 .vscode/
 .idea/
+*.code-workspace
 
 
-# =====================
-# Logs
-# =====================
-
-**/*.log
-
-
-# =====================
-# OS
-# =====================
+# ==================================================
+# Operating System
+# ==================================================
 
 .DS_Store
 Thumbs.db
+desktop.ini
+
+
+# ==================================================
+# Local Environment / Secrets
+# ==================================================
+
+.env
+.env.*
+!.env.example
+
+
+# ==================================================
+# Node
+# ==================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+
+# ==================================================
+# Media / Demo Runtime Data
+# ==================================================
+
+# User uploaded videos
+*.mp4
+*.avi
+*.mov
+
+# Generated json results
+sign_output.json
+semantic_output.json
+
+
+# ==================================================
+# Optional Large Files
+# ==================================================
+
+# Uncomment if embeddings are generated locally
+# embeddings/
+
