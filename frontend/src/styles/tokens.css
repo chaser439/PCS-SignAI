@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+  --bg-primary: #f6f7f4;
+  --bg-secondary: #edf1ee;
+  --bg-deep: #153f39;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #fbfcfa;
+  --surface-muted: #e7ece9;
+  --text-primary: #182622;
+  --text-secondary: #66736f;
+  --text-tertiary: #8a9692;
+  --brand-primary: #194d44;
+  --brand-deep: #103b35;
+  --brand-secondary: #6e9e91;
+  --accent-warm: #e99c72;
+  --accent-coral: #d87968;
+  --accent-blue: #738d9d;
+  --accent-lime: #a9bd7b;
+  --border-soft: rgba(25, 77, 68, 0.12);
+  --border-medium: rgba(25, 77, 68, 0.23);
+  --shadow-soft: 0 24px 70px rgba(27, 59, 51, 0.09);
+  --shadow-float: 0 18px 42px rgba(21, 63, 57, 0.13);
+  --container: 1440px;
+  --gutter: 52px;
+  --section-space: 112px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", Inter, system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 1180px) {
+  :root {
+    --gutter: 32px;
+    --section-space: 96px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --gutter: 20px;
+    --section-space: 76px;
+  }
+}
