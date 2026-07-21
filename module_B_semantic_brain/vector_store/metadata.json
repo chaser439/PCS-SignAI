@@ -1431,6 +1431,21 @@
     }
   },
   {
+    "id": "sign_101",
+    "content": "手语动作:\n吃,席\n\n\n语义:\n表示参加宴席活动，需要结合中文文化背景理解\n\n\n中文表达:\n我要去吃席\n\n\n用户意图:\nparticipate_social_event\n\n\n应用场景:\nchinese_culture\n\n\n情绪状态:\nneutral",
+    "category": "culture",
+    "source": "sign_semantics",
+    "metadata": {
+      "emotion": "neutral",
+      "intent": "participate_social_event",
+      "scenario": "chinese_culture",
+      "gloss": [
+        "吃",
+        "席"
+      ]
+    }
+  },
+  {
     "id": "culture_001",
     "content": "文化表达:\n拍拍胸口\n\n\n字面含义:\n手拍击胸部\n\n\n真实含义:\n表示保证、放心、我负责\n\n\n情绪:\nconfident",
     "category": "culture",
@@ -1482,6 +1497,33 @@
     "source": "chinese_culture",
     "metadata": {
       "emotion": "neutral"
+    }
+  },
+  {
+    "id": "culture_007",
+    "content": "文化表达:\n吃席\n\n\n字面含义:\n参加吃饭活动\n\n\n真实含义:\n在中文网络和口语环境中，吃席通常不是简单表示进食，而是指参加婚宴、宴请或大型聚餐活动\n\n\n情绪:\nneutral",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "neutral"
+    }
+  },
+  {
+    "id": "culture_008",
+    "content": "文化表达:\n随礼\n\n\n字面含义:\n给予礼物或金钱\n\n\n真实含义:\n中国婚礼、生日、庆典等社会关系场景中的礼节性行为\n\n\n情绪:\nneutral",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "neutral"
+    }
+  },
+  {
+    "id": "culture_009",
+    "content": "文化表达:\n回家过年\n\n\n字面含义:\n返回家庭所在地庆祝春节\n\n\n真实含义:\n不仅表示移动行为，更包含家庭团聚和春节文化意义\n\n\n情绪:\npositive",
+    "category": "culture",
+    "source": "chinese_culture",
+    "metadata": {
+      "emotion": "positive"
     }
   },
   {

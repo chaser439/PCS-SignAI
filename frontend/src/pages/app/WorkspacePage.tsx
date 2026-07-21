@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type DragEvent } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
-  ArrowRight, Bot, Camera, Check, CheckCircle2, Clipboard, Download, FileAudio, FileText,
+  ArrowRight, BookOpen, Bot, BrainCircuit, Camera, Check, CheckCircle2, Clipboard, Download, FileAudio, FileText,
   FileVideo, FolderOpen, Gauge, Hand, HeartPulse, LoaderCircle, Pause, Play,
   RotateCcw, Sparkles, Square, UploadCloud, UserRound, Video, Volume2, WandSparkles, X,
 } from 'lucide-react'
@@ -14,7 +14,7 @@ import { historyService } from '../../services/historyService'
 import { interactionService } from '../../services/interactionService'
 import { settingsService } from '../../services/settingsService'
 import type {
-  AnalysisTask, AvatarId, ConversionDirection, InteractionResult, QualityMode, TaskFeedbackRating,
+  AnalysisTask, AvatarId, ConversionDirection, InteractionResult, QualityMode, SemanticResult, TaskFeedbackRating,
 } from '../../services/serviceTypes'
 import { createId } from '../../services/storage'
 import { PageHeader } from '../../components/ui/PageHeader'
@@ -76,6 +76,58 @@ function AvatarFigure({ avatar, playing }: { avatar: AvatarId; playing: boolean 
       </div>
       <div className="virtual-avatar__floor" />
     </div>
+  )
+}
+
+function SemanticEvidence({ semantic }: { semantic: SemanticResult }) {
+  return (
+    <section className="result-evidence" aria-label="语义增强证据">
+      <article className="evidence-card">
+        <header className="evidence-card__header">
+          <span><BookOpen /></span>
+          <div>
+            <strong>中文文化知识检索</strong>
+            <p>RAG 为本次语义理解提供的中文文化和场景依据</p>
+          </div>
+        </header>
+        {semantic.rag_hits.length > 0 ? (
+          <ul>
+            {semantic.rag_hits.map((hit, index) => (
+              <li key={hit.id || `rag-${index}`}>
+                <span>{hit.title}</span>
+                <small>
+                  {hit.domain}
+                  {hit.score > 0 ? ` · 匹配度 ${Math.round(hit.score * 100)}%` : ''}
+                </small>
+              </li>
+            ))}
+          </ul>
+        ) : <p className="evidence-card__empty">本次没有检索到额外的文化知识。</p>}
+      </article>
+
+      <article className="evidence-card">
+        <header className="evidence-card__header">
+          <span><BrainCircuit /></span>
+          <div>
+            <strong>个性化记忆</strong>
+            <p>当前用户的历史表达对本次语义判断提供的补充</p>
+          </div>
+        </header>
+        {semantic.memory_hits.length > 0 ? (
+          <ul>
+            {semantic.memory_hits.map((hit, index) => (
+              <li key={`${hit.id || 'memory'}-${index}`}>
+                <span>{hit.meaning}</span>
+                <small>
+                  {hit.id}
+                  {hit.score > 0 ? ` · 可信度 ${Math.round(hit.score * 100)}%` : ''}
+                </small>
+              </li>
+            ))}
+          </ul>
+        ) : <p className="evidence-card__empty">本次没有命中该用户的历史表达记忆。</p>}
+      </article>
+    </section>
   )
 }
 
@@ -224,6 +276,9 @@ export function WorkspacePage() {
 
   const runInteraction = async () => {
     if (!inputReady || !user) { notify('请先准备输入内容', direction === 'sign-to-language' ? '完成录制或选择视频文件' : '输入文字或选择语音文件', 'error'); return }
+    const semanticUserId = user.account.trim()
+      ? `account:${user.account.trim().toLowerCase()}`
+      : user.id
     resetOutput()
     setProcessing(true)
     setActiveStep(0)
@@ -234,7 +289,7 @@ export function WorkspacePage() {
     }
     try {
       const nextResult = await interactionService.process({
-        userId: user.id,
+        userId: semanticUserId,
         direction,
         quality,
         inputName: inputSummary,
@@ -345,7 +400,39 @@ export function WorkspacePage() {
         {result && task && <motion.section className="interaction-result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <header className="interaction-result__header"><div><span><Sparkles />FINAL RESULT</span><h2>{direction === 'sign-to-language' ? '理解结果已准备' : '虚拟人手语已准备'}</h2><p>{qualityOptions.find((item) => item.id === quality)?.label}模式 · 用时 {(task.processingMs / 1000).toFixed(1)} 秒</p></div><strong>{Math.round((result.semanticResult?.overall_confidence ?? .92) * 100)}<small>% 结果可信度</small></strong></header>
 
-          {direction === 'sign-to-language' ? <div className="sign-language-result"><div className="result-tokens"><span>原始识别 Token</span><div>{result.tokens.map((token, index) => <strong key={`${token}-${index}`}><small>{String(index + 1).padStart(2, '0')}</small>{token}</strong>)}</div></div><div className="ai-polish-result"><div><span><FileText />初始识别文字</span><p>{result.baselineText}</p></div><ArrowRight /><div><span><Bot />AI 语义梳理</span><h3>{result.polishedText}</h3><p>已结合上下文调整语序，并保留原始表达意图。</p></div></div><div className="result-cues"><div><HeartPulse /><p><span>情绪与表情线索</span><strong>{result.emotion.label}</strong><small>证据强度 {Math.round(result.emotion.score * 100)}%</small></p></div><div className="result-actions"><button className="button button--ghost" type="button" onClick={playSpeech}>{speaking ? <Pause /> : <Volume2 />}{speaking ? '停止后可重播' : '播放最终语音'}</button><button className="icon-command" type="button" onClick={copyResult}><Clipboard /><span>复制文本</span></button><button className="icon-command" type="button" onClick={() => saveBlob(interactionService.downloadText(result), 'PCS-SignAI-result.txt')}><Download /><span>下载结果</span></button></div></div></div> : <div className="avatar-result"><div className="avatar-result__copy"><span>输入内容</span><p>{result.baselineText}</p><div><Bot /><p><small>AI 梳理后的手语表达</small><strong>{result.avatarGloss}</strong><em>{result.polishedText}</em></p></div><ul>{result.avatarStates?.map((state) => <li key={state}><CheckCircle2 />{state}</li>)}</ul></div><div className="avatar-player"><AvatarFigure avatar={avatar} playing={avatarPlaying} /><div className="avatar-player__caption"><span><i />{avatarPlaying ? '正在播放手语动作' : '虚拟人视频结果'}</span><strong>{result.avatarGloss}</strong></div><div className="avatar-player__controls"><button className="button" type="button" onClick={playAvatar}>{avatarPlaying ? <Pause /> : <Play />}{avatarPlaying ? '播放中' : '播放视频'}</button><button className="icon-command" type="button" onClick={playAvatar}><RotateCcw /><span>重播</span></button><button className="icon-command" type="button" disabled={downloadingVideo} onClick={downloadAvatar}>{downloadingVideo ? <LoaderCircle className="spin" /> : <Download />}<span>{downloadingVideo ? '生成中' : '下载视频'}</span></button></div></div></div>}
+          {direction === 'sign-to-language' ? (
+            <div className="sign-language-result">
+              <div className="result-tokens">
+                <span>原始识别 Token</span>
+                <div>{result.tokens.map((token, index) => <strong key={`${token}-${index}`}><small>{String(index + 1).padStart(2, '0')}</small>{token}</strong>)}</div>
+              </div>
+              <div className="ai-polish-result">
+                <div><span><FileText />初始识别文字</span><p>{result.baselineText}</p></div>
+                <ArrowRight />
+                <div>
+                  <span><Bot />AI 语义梳理</span>
+                  <h3>{result.polishedText}</h3>
+                  <p>{result.semanticResult?.inferred_intent && result.semanticResult.inferred_intent !== 'unknown' ? `推理意图：${result.semanticResult.inferred_intent}` : '已结合上下文调整语序，并保留原始表达意图。'}</p>
+                </div>
+              </div>
+              {result.semanticResult && <SemanticEvidence semantic={result.semanticResult} />}
+              <div className="result-cues">
+                <div>
+                  <HeartPulse />
+                  <p>
+                    <span>情绪与表情线索</span>
+                    <strong>{result.emotion.label}</strong>
+                    <small>{typeof result.emotion.score === 'number' ? `证据强度 ${Math.round(result.emotion.score * 100)}%` : 'Module B 未提供独立的情绪置信度'}</small>
+                  </p>
+                </div>
+                <div className="result-actions">
+                  <button className="button button--ghost" type="button" onClick={playSpeech}>{speaking ? <Pause /> : <Volume2 />}{speaking ? '停止后可重播' : '播放最终语音'}</button>
+                  <button className="icon-command" type="button" onClick={copyResult}><Clipboard /><span>复制文本</span></button>
+                  <button className="icon-command" type="button" onClick={() => saveBlob(interactionService.downloadText(result), 'PCS-SignAI-result.txt')}><Download /><span>下载结果</span></button>
+                </div>
+              </div>
+            </div>
+          ) : <div className="avatar-result"><div className="avatar-result__copy"><span>输入内容</span><p>{result.baselineText}</p><div><Bot /><p><small>AI 梳理后的手语表达</small><strong>{result.avatarGloss}</strong><em>{result.polishedText}</em></p></div><ul>{result.avatarStates?.map((state) => <li key={state}><CheckCircle2 />{state}</li>)}</ul></div><div className="avatar-player"><AvatarFigure avatar={avatar} playing={avatarPlaying} /><div className="avatar-player__caption"><span><i />{avatarPlaying ? '正在播放手语动作' : '虚拟人视频结果'}</span><strong>{result.avatarGloss}</strong></div><div className="avatar-player__controls"><button className="button" type="button" onClick={playAvatar}>{avatarPlaying ? <Pause /> : <Play />}{avatarPlaying ? '播放中' : '播放视频'}</button><button className="icon-command" type="button" onClick={playAvatar}><RotateCcw /><span>重播</span></button><button className="icon-command" type="button" disabled={downloadingVideo} onClick={downloadAvatar}>{downloadingVideo ? <LoaderCircle className="spin" /> : <Download />}<span>{downloadingVideo ? '生成中' : '下载视频'}</span></button></div></div></div>}
 
           <FeedbackPanel task={task} onSubmitted={setFeedbackRating} />
           {feedbackRating && <span className="sr-only">当前反馈：{feedbackRating}</span>}

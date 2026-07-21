@@ -1,50 +1,97 @@
 [
-{
-"id":"culture_001",
-"expression":"拍拍胸口",
-"literal":"手拍击胸部",
-"meaning":"表示保证、放心、我负责",
-"emotion":"confident",
-"context":"中国日常交流"
-},
-{
-"id":"culture_002",
-"expression":"竖大拇指",
-"literal":"拇指向上",
-"meaning":"表示认可、赞扬",
-"emotion":"positive",
-"context":"社交交流"
-},
-{
-"id":"culture_003",
-"expression":"摇头",
-"literal":"左右移动头部",
-"meaning":"表示否定或者拒绝",
-"emotion":"neutral",
-"context":"日常交流"
-},
-{
-"id":"culture_004",
-"expression":"点头",
-"literal":"上下移动头部",
-"meaning":"表示同意或者确认",
-"emotion":"positive",
-"context":"交流"
-},
-{
-"id":"culture_005",
-"expression":"抱拳",
-"literal":"双手合抱",
-"meaning":"中国传统礼貌表达",
-"emotion":"respect",
-"context":"文化交流"
-},
-{
-"id":"culture_006",
-"expression":"摆手",
-"literal":"左右摆动手掌",
-"meaning":"可能表示拒绝、不要或者告别",
-"emotion":"neutral",
-"context":"中文语境"
-}
+  {
+    "id": "culture_001",
+    "expression": "拍拍胸口",
+    "literal": "手拍击胸部",
+    "meaning": "表示保证、放心、我负责",
+    "emotion": "confident",
+    "context": "中国日常交流"
+  },
+  {
+    "id": "culture_002",
+    "expression": "竖大拇指",
+    "literal": "拇指向上",
+    "meaning": "表示认可、赞扬",
+    "emotion": "positive",
+    "context": "社交交流"
+  },
+  {
+    "id": "culture_003",
+    "expression": "摇头",
+    "literal": "左右移动头部",
+    "meaning": "表示否定或者拒绝",
+    "emotion": "neutral",
+    "context": "日常交流"
+  },
+  {
+    "id": "culture_004",
+    "expression": "点头",
+    "literal": "上下移动头部",
+    "meaning": "表示同意或者确认",
+    "emotion": "positive",
+    "context": "交流"
+  },
+  {
+    "id": "culture_005",
+    "expression": "抱拳",
+    "literal": "双手合抱",
+    "meaning": "中国传统礼貌表达",
+    "emotion": "respect",
+    "context": "文化交流"
+  },
+  {
+    "id": "culture_006",
+    "expression": "摆手",
+    "literal": "左右摆动手掌",
+    "meaning": "可能表示拒绝、不要或者告别",
+    "emotion": "neutral",
+    "context": "中文语境"
+  },
+  {
+    "id": "culture_007",
+    "expression": "吃席",
+    "literal": "参加吃饭活动",
+    "meaning": "在中文网络和口语环境中，吃席通常不是简单表示进食，而是指参加婚宴、宴请或大型聚餐活动",
+    "emotion": "neutral",
+    "domain": "中文文化",
+    "context": [
+      "婚礼",
+      "宴会",
+      "亲友聚会",
+      "地方文化表达"
+    ],
+    "reasoning_hint": "需要结合中文社会文化背景理解，避免直接翻译为 eat meal",
+    "examples": [
+      "下周朋友结婚，要去吃席",
+      "村里今天有人办酒席，大家一起吃席"
+    ]
+  },
+  {
+    "id": "culture_008",
+    "expression": "随礼",
+    "literal": "给予礼物或金钱",
+    "meaning": "中国婚礼、生日、庆典等社会关系场景中的礼节性行为",
+    "emotion": "neutral",
+    "domain": "中文文化",
+    "context": [
+      "婚宴",
+      "亲友关系",
+      "社会礼仪"
+    ],
+    "reasoning_hint": "需要结合中国礼仪文化理解其社会关系含义"
+  },
+  {
+    "id": "culture_009",
+    "expression": "回家过年",
+    "literal": "返回家庭所在地庆祝春节",
+    "meaning": "不仅表示移动行为，更包含家庭团聚和春节文化意义",
+    "emotion": "positive",
+    "domain": "中文文化",
+    "context": [
+      "春节",
+      "家庭",
+      "传统节日"
+    ],
+    "reasoning_hint": "需要结合中国家庭文化进行语义推理"
+  }
 ]

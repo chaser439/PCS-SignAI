@@ -1098,5 +1098,32 @@
   "emotion":"positive",
   "intent":"express_gratitude",
   "scenario":"education"
- }
+ },
+ {
+"id":"sign_101",
+
+"gloss":
+[
+"吃",
+"席"
+],
+
+"meaning":
+"表示参加宴席活动，需要结合中文文化背景理解",
+
+"chinese":
+"我要去吃席",
+
+"category":
+"culture",
+
+"emotion":
+"neutral",
+
+"intent":
+"participate_social_event",
+
+"scenario":
+"chinese_culture"
+}
 ]

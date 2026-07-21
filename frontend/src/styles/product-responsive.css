@@ -137,6 +137,7 @@
   .direction-picker { grid-template-columns: 1fr; }
   .quality-picker { grid-template-columns: 1fr; }
   .camera-input,.language-input,.avatar-result,.memory-upload { grid-template-columns: 1fr; }
+  .result-evidence { grid-template-columns: 1fr; }
   .camera-preview { min-height: 360px; }
   .recording-controls { flex-direction: row; border-top: 1px solid var(--border-soft); border-left: 0; }
   .language-textarea { grid-row: auto; }
@@ -179,6 +180,9 @@
   .interaction-result__header { align-items: flex-start; flex-direction: column; }
   .ai-polish-result { grid-template-columns: 1fr; }
   .ai-polish-result > svg { margin: 10px auto; transform: rotate(90deg); }
+  .result-evidence { padding: 20px; }
+  .evidence-card li { grid-template-columns: 1fr; }
+  .evidence-card li > small { white-space: normal; }
   .result-actions { width: 100%; flex-wrap: wrap; }
   .result-actions .button { width: 100%; }
   .avatar-result__copy { padding: 24px; }
