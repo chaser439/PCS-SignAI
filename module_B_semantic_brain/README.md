@@ -76,6 +76,11 @@ pip install -r requirements.txt
 填写：
 
 DEEPSEEK_API_KEY=your_key
+
+请只在本地 `.env` 中填写真实密钥，不要提交该文件。
+
+个性化记忆 demo 使用公开合成账号 `demo-memory-user`。前端会传入 `account:demo-memory-user`，用于稳定命中“妈妈 + 药”的演示记忆；该身份不对应真实用户。
+
 5. 知识库构建
 ## 构建向量知识库
 
@@ -96,17 +101,17 @@ vector_store/
 
 运行：
 
-python -m uvicorn api.app:app --reload
+python -m uvicorn api.main:app --host 127.0.0.1 --port 9002 --reload
 
 
 服务地址：
 
-http://127.0.0.1:8000
+http://127.0.0.1:9002
 
 
 接口文档：
 
-http://127.0.0.1:8000/docs
+http://127.0.0.1:9002/docs
 7.API接口说明
 请求，例如
 {

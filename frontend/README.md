@@ -38,6 +38,6 @@ npm run build
 
 ## 数据与服务
 
-页面只通过 `src/services/` 访问数据。当前 Local Provider 提供账号会话、双向转换结果、虚拟人视频、历史记录、任务反馈、用户记忆和偏好设置，并通过 `localStorage` 或 `sessionStorage` 持久化。`interactionService.ts` 为视频、实时流、双向转换、虚拟人、AI 文本梳理、反馈和记忆上传保留了未来 HTTP Provider 边界。
+页面只通过 `src/services/` 访问数据。账号会话、历史记录、任务反馈、记忆中心展示数据和偏好设置仍通过 `localStorage` 或 `sessionStorage` 持久化；手语转语言流程会把用户选择的视频发送到本机 `127.0.0.1:9001` 的 Module A，再把识别结果发送到本机 `127.0.0.1:9002` 的 Module B。文字转手语、虚拟人视频以及部分产品数据仍使用前端 Local Provider。
 
-所有视觉均由本地 SVG 与 CSS 构成。上传文件只用于浏览器内预览和记录文件信息；当前 Local Provider 不会把内容发送到远端。
+核心 demo 的完整启动方式、合成演示账号和素材命名要求见仓库根目录 `README.md`。反馈记录当前保存在浏览器本地，尚不会自动写入 Module B 的服务端记忆文件。

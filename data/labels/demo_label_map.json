@@ -7,80 +7,118 @@
     "token_details": [
       {
         "token": "胃",
-        "start_sec": 0.0,
-        "end_sec": 1.0,
-        "confidence": 0.95,
-        "modalities": [
+        "start_sec":0,
+        "end_sec":1,
+        "confidence":0.95,
+        "modalities":["hand"]
+      },
+      {
+        "token":"疼",
+        "start_sec":1,
+        "end_sec":2,
+        "confidence":0.95,
+        "modalities":["hand"]
+      }
+    ],
+    "overall_confidence":0.95
+  },
+
+
+  "吃席": {
+    "sign_sequence":[
+      "吃席"
+    ],
+    "token_details":[
+      {
+        "token":"吃席",
+        "start_sec":0,
+        "end_sec":2,
+        "confidence":0.95,
+        "modalities":[
+          "hand"
+        ]
+      }
+    ],
+    "overall_confidence":0.95
+  },
+
+
+  "妈妈药": {
+    "sign_sequence":[
+      "妈妈",
+      "药"
+    ],
+    "token_details":[
+      {
+        "token":"妈妈",
+        "start_sec":0,
+        "end_sec":1,
+        "confidence":0.95,
+        "modalities":[
           "hand"
         ]
       },
       {
-        "token": "疼",
-        "start_sec": 1.0,
-        "end_sec": 2.0,
-        "confidence": 0.95,
-        "modalities": [
+        "token":"药",
+        "start_sec":1,
+        "end_sec":2,
+        "confidence":0.95,
+        "modalities":[
           "hand"
         ]
       }
     ],
-    "overall_confidence": 0.95
+    "overall_confidence":0.95
   },
 
 
   "你们好": {
-    "sign_sequence": [
+    "sign_sequence":[
       "你好"
     ],
-    "token_details": [
+    "token_details":[
       {
-        "token": "你好",
-        "start_sec": 0.0,
-        "end_sec": 1.5,
-        "confidence": 0.95,
-        "modalities": [
-          "hand"
-        ]
+        "token":"你好",
+        "start_sec":0,
+        "end_sec":1.5,
+        "confidence":0.95,
+        "modalities":["hand"]
       }
     ],
-    "overall_confidence": 0.95
+    "overall_confidence":0.95
   },
 
 
-  "阿姨": {
-    "sign_sequence": [
+  "阿姨":{
+    "sign_sequence":[
       "阿姨"
     ],
-    "token_details": [
+    "token_details":[
       {
-        "token": "阿姨",
-        "start_sec": 0.0,
-        "end_sec": 1.0,
-        "confidence": 0.95,
-        "modalities": [
-          "hand"
-        ]
+        "token":"阿姨",
+        "start_sec":0,
+        "end_sec":1,
+        "confidence":0.95,
+        "modalities":["hand"]
       }
     ],
-    "overall_confidence": 0.95
+    "overall_confidence":0.95
   },
 
 
-  "医院": {
-    "sign_sequence": [
+  "医院":{
+    "sign_sequence":[
       "医院"
     ],
-    "token_details": [
+    "token_details":[
       {
-        "token": "医院",
-        "start_sec": 0.0,
-        "end_sec": 1.0,
-        "confidence": 0.95,
-        "modalities": [
-          "hand"
-        ]
+        "token":"医院",
+        "start_sec":0,
+        "end_sec":1,
+        "confidence":0.95,
+        "modalities":["hand"]
       }
     ],
-    "overall_confidence": 0.95
+    "overall_confidence":0.95
   }
 }

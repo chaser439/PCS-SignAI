@@ -54,6 +54,12 @@ export const interactionService = {
         semanticResult
       )
 
+      if (semanticResult.status !== 'ok') {
+        throw new Error(
+          semanticResult.error?.message ?? 'Module B 未能生成语义结果'
+        )
+      }
+
 
       return {
 

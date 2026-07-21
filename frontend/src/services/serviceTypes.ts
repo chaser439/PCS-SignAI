@@ -51,7 +51,7 @@ export interface MemoryHit {
 
 export interface EmotionResult {
   label: string
-  score: number
+  score?: number
 }
 
 export interface ConfidenceBreakdown {
